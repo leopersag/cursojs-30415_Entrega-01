@@ -1,0 +1,205 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif; }
+  
+  .body_aside {
+    display: grid;
+    grid-template-areas: "header"
+   "aside1"
+   "main"
+   "aside2"
+   "footer";
+    justify-items: stretch;
+    justify-content: stretch;
+    align-items: center; }
+  
+  .body_naside {
+    display: grid;
+    grid-template-areas: "header"
+   "main"
+   "footer";
+    justify-content: stretch;
+    align-items: center; }
+  
+  /* ------------------------------- Estilo del nav ---------------------------- */
+  header {
+    grid-area: header;
+    top: 0px;
+    margin: 0px 0vw; }
+    header div {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; }
+
+/* ------------------------------- Estilo del Main --------------------------------- */
+main {
+    grid-area: main;
+    margin: 5px 0vw;
+    color: #303030; }
+    main a {
+      text-decoration: none;
+      color: #0000d5; }
+    main thead {
+      text-align: left; }
+    main .img_fondo {
+      width: 100vw; }
+  
+  .parrafo {
+    font-size: 17px;
+    text-align: center;
+    margin: 10px 0px; }
+  
+  /* ---Estilo del Main Index--- */
+  .img_main, .contacto_info {
+    display: flex;
+    justify-content: center; }
+
+/* ---Estilo del Main Fotos--- */
+.fotos {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center; }
+    .fotos img {
+      width: 80vw;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+
+.foto_proximamente {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center; }
+.foto_proximamente img {
+    width: 80vw;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+
+.foto_smoke {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center; }
+.foto_smoke img {
+    width: 80vw;
+    margin-top: 2px;
+    margin-bottom: 2px; }
+
+/* ------------------------------- Estilo del Aside ------------------------------- */
+.aside1 {
+    grid-area: aside1;
+    margin: 5px 0px 5px 1vw;
+    justify-self: center; }
+  
+  .aside2 {
+    grid-area: aside2;
+    margin: 5px 1vw 5px 0px;
+    justify-self: center; }
+  
+  .aside_foto {
+    width: 10vw;
+    max-width: 150px;}
+  
+  /* ------------------------------- Estilo del Footer ------------------------------- */
+  footer {
+    grid-area: footer;
+    margin: 0px 0vw; }
+    footer div {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; }
+  
+  .footer_derechos {
+    padding: 0px 15px;
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 200;
+    color: #a3a3a3; }
+  
+  .footer_media_icon {
+    height: 30px;
+    margin: 0px; }
+  
+
+/* ------------------------------- Media query >768px ------------------------------- */
+/* ------------------------------- Media query >768px ------------------------------- */
+
+ @media screen and (min-width: 768px) {
+    .body_aside1 {
+      grid-template-areas: "header header header"
+   "asidea main asideb"
+   "footer footer footer";
+      justify-content: stretch;
+      align-items: center; }
+    .body_naside {
+      grid-template-areas: "header header header"
+   "main main main"
+   "footer footer footer"; }
+    /* ---Estilo del nav--- */
+    header div {
+      flex-flow: row wrap; 
+      justify-content: end;}
+      
+    nav div ul li {
+      margin: 0px;
+      padding: 10px; }
+    /* ---Estilo del Main--- */
+     main a:hover {
+    text-decoration: underline; }
+    .asidea {
+         grid-area: asidea;}
+    .asideb {
+        grid-area: asideb;}
+
+    /* ---Estilo del Main Fotos--- */
+    .fotos {
+        flex-flow: row wrap; }
+    .fotos img {
+        width: auto;
+        height: 800px; }
+
+    .foto_proximamente {
+        flex-flow: row wrap;}
+
+    .foto_proximamente img {
+        width: 80vw;
+        height: auto; }
+
+    .foto_smoke {
+        flex-flow: row wrap;}
+
+    .foto_smoke img {
+        width: 100vw;
+        height: auto; }
+    
+    .fotos_item:hover {
+        position: relative;
+        top: 20px; }
+        
+    /* ---Estilo del Footer--- */
+    footer div {
+        flex-flow: row wrap;
+        justify-content: flex-end; } }
+
+/* ------------------------------- Media query >1024px ------------------------------- */
+/* ------------------------------- Media query >1024px ------------------------------- */
+
+@media screen and (min-width: 1024px) {
+    .body_aside {
+      grid-template-areas: "header header header"
+   "aside1 main aside2"
+   "footer footer footer";
+      justify-content: stretch;
+      align-items: center; }
+    .body_aside1 {
+      grid-template-areas: "header header header"
+   "asidea main asideb"
+   "footer footer footer"; }
+   .aside1 {
+    justify-self: auto; }
+  .aside2 {
+    justify-self: right;
+    } }
